@@ -2,6 +2,7 @@ package com.ddtech.ddverifier.managers
 
 import android.graphics.Bitmap
 import android.view.SurfaceControl
+import com.example.rocketapp.model.rocketsmodel
 import java.util.*
 
 public class Globals {
@@ -22,6 +23,7 @@ public class Globals {
 
 
     val BaseWebservice = "https://api.spacexdata.com/v3/"
+    var StoredData : rocketsmodel? = null
 
 
 

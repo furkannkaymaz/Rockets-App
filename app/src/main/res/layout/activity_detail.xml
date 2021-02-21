@@ -9,12 +9,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/scollViewMain"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
 
         <ImageView
             android:id="@+id/rocketImage"
@@ -25,152 +25,172 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-
-
-        <TextView
-            android:id="@+id/rocketDesc"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/rocketfirstStage"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
-
-        <TextView
-            android:id="@+id/rocketName"
-            app:layout_goneMarginBottom="10dp"
-            android:gravity="center"
-            android:padding="10dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="22dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/rocketImage"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_goneMarginTop="10dp"
-            />
-
-        <View
-            android:id="@+id/view1"
+            android:layout_margin="10dp"
+            android:id="@+id/botmenu"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/rocketName"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/rocketCompany"/>
+            android:background="@drawable/rounded_menu"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/rocketImage"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/rocketCompany"
-            app:layout_goneMarginBottom="10dp"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/view1"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@id/rocketCompanyDefinition"
-            app:layout_goneMarginTop="10dp"
-            />
 
-        <TextView
-            android:id="@+id/rocketCompanyDefinition"
-            app:layout_goneMarginBottom="10dp"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:text="Company : "
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/view1"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_goneMarginTop="10dp"
-            />
 
-        <TextView
-            android:id="@+id/rocketDiameter"
-            app:layout_goneMarginBottom="10dp"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/rocketCompany"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@+id/rocketDiameterDefinition"
-            app:layout_goneMarginTop="10dp"
-            />
+            <TextView
+                android:id="@+id/rocketDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toBottomOf="@+id/rocketfirstStage"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
 
-        <TextView
-            android:id="@+id/rocketDiameterDefinition"
-            app:layout_goneMarginBottom="10dp"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:textStyle="bold"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="18dp"
-            android:text="Diameter : "
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/rocketCompany"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_goneMarginTop="10dp"
-            />
+            <TextView
+                android:id="@+id/rocketName"
+                app:layout_goneMarginBottom="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="22dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toTopOf="@+id/botmenu"
+                android:layout_marginTop="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_goneMarginTop="10dp"
+                />
 
-        <TextView
-            android:id="@+id/rocketfirstStage"
-            app:layout_goneMarginBottom="10dp"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="18dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/rocketDiameter"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@id/rocketCompanyDefinition"
-            app:layout_goneMarginTop="10dp"
-            />
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rocketName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rocketCompany"/>
 
-        <TextView
-            android:id="@+id/rocketfirstStageDefinition"
-            app:layout_goneMarginBottom="10dp"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:text="Height :"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:fontFamily="@font/fontscreen"
-            app:layout_constraintTop_toBottomOf="@+id/rocketDiameter"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_goneMarginTop="10dp"
-            />
+            <TextView
+                android:id="@+id/rocketCompany"
+                app:layout_goneMarginBottom="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toBottomOf="@+id/view1"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/rocketCompanyDefinition"
+                app:layout_goneMarginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/rocketCompanyDefinition"
+                app:layout_goneMarginBottom="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Company : "
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toBottomOf="@+id/view1"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_goneMarginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/rocketDiameter"
+                app:layout_goneMarginBottom="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toBottomOf="@+id/rocketCompany"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/rocketDiameterDefinition"
+                app:layout_goneMarginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/rocketDiameterDefinition"
+                app:layout_goneMarginBottom="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18dp"
+                android:text="Diameter : "
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toBottomOf="@+id/rocketCompany"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_goneMarginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/rocketfirstStage"
+                app:layout_goneMarginBottom="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toBottomOf="@+id/rocketDiameter"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/rocketCompanyDefinition"
+                app:layout_goneMarginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/rocketfirstStageDefinition"
+                app:layout_goneMarginBottom="10dp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:text="Height :"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/fontscreen"
+                app:layout_constraintTop_toBottomOf="@+id/rocketDiameter"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_goneMarginTop="10dp"
+                />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 

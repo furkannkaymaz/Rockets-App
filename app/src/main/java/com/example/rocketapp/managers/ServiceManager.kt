@@ -2,6 +2,7 @@ package com.example.rocketapp.managers
 
 
 
+import com.ddtech.ddverifier.managers.Globals
 import com.example.rocketapp.model.rocketsmodel
 
 import com.google.gson.Gson
@@ -24,6 +25,7 @@ class ServiceManager {
 
                 val plainBody: String = it
                 val responseConvert: rocketsmodel = Gson().fromJson(plainBody, rocketsmodel::class.java)
+                Globals.shared.StoredData = responseConvert
 
                 callbackSuccess(responseConvert)
                 return@callback
